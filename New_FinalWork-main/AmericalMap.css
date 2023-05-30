@@ -1,0 +1,25 @@
+:root {
+    --color-gold: #B99362;
+  }
+  body {
+    background-color: #222
+  }
+  svg {
+    height: 100vh;
+  }
+  path {
+    stroke: white;
+    fill: transparent;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  path:hover {
+    fill: var(--color-gold);
+    transform: translate(-5px, -5px);
+  }
+  
+  /* 用德州測試，單獨州可以擁有自己的CSS，可以用不同顏色等 */
+  .tx:hover{ 
+    fill:#ff0000
+  }
+  

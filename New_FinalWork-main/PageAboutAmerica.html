@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./PageAboutAmerica.css">
+        <title>America 美國</title>
+        <script>
+            function autoScrollDown() {
+                var windowHeight = window.innerHeight;
+                var documentHeight = document.documentElement.scrollHeight;
+                var currentPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+                var scrollStep = 8; // 每次滚动的距离
+                var scrollInterval = 75; // 滚动的时间间隔（毫秒）
+
+                var scrollIntervalId = setInterval(function() {
+                    currentPosition += scrollStep;
+
+                    if (currentPosition >= documentHeight - windowHeight) {
+                    clearInterval(scrollIntervalId); // 到达底部停止滚动
+                    }
+
+                    window.scrollTo(0, currentPosition);
+                }, scrollInterval);
+            }
+
+            // 在页面加载完成后自动触发滚动
+            window.onload = function() {
+            setTimeout(autoScrollDown, 1000); // 2秒延迟后开始自动向下滚动
+            };
+            function changeImage() {
+              var image = document.getElementById("myImage");
+              if (image.src.match("button.png")) {
+                image.src = "button_image_click.png";
+                setTimeout(function() {
+                    window.location.assign("AmericaMap.html");
+                }, 500); 
+              } 
+              else {
+                image.src = "button.png";
+              }
+            }   
+        </script>
+    </head>
+    <body>
+        <div style="height: 2000px;">
+        <article>
+            <div class = "bg">
+                <img src="world-trade-center.jpg.webp" >
+            </div>
+            <div id="scroll-container">
+            <p>
+            美國是一個多元而令人驚嘆的國家，擁有眾多令人嘆為觀止的景點。<br>
+            無論你是喜愛自然風光、文化歷史還是現代都市，美國都能滿足你的<br>
+            各種旅遊需求。以下是一些不容錯過的美國景點，讓我們一起來探索吧！
+            </p>
+            <p>
+            首先，美國的國家公園系統是世界上最著名和最受歡迎的自然保護區之一,<br>
+            。其中一個必訪的國家公園是一個自然奇觀的代表——大峽谷國家公園。<br>
+            大峽谷位於亞利桑那州，以其壯麗的峽谷景色而聞名於世。站在峽谷邊緣，<br>
+            你將會被其廣闊、深遠的景色所震撼。你可以選擇徒步或乘坐直升機，<br>
+            探索峽谷內的美景。此外，美國還有許多其他令人難以置信的國家公園，<br>
+            如黃石國家公園、紅木國家公園和大峽谷國家公園等等，每一個都值得一遊。
+            </p>
+            
+            <p>
+            如果你對城市文化感興趣，美國的大城市絕對不容錯過。紐約市是美國最繁忙<br>
+            和多元化的城市之一，擁有許多世界知名的地標，如自由女神像和時代廣場。<br>
+            芝加哥是另一個充滿活力和藝術氛圍的城市，這裡有豐富的博物館、劇院和美食。<br>
+            舊金山則以其美麗的海灣景色、金門大橋和陡峭的山丘而聞名。<br>
+            每個城市都有其獨特的魅力和文化特色，可以帶給你難忘的體驗。
+            </p>
+            <p>
+            另外，美國還有許多著名的歷史遺址和文化景點。華盛頓特區是政治和<br>
+            歷史的中心，你可以參觀白宮、國會大廈和華盛頓紀念碑等標誌性建築物。<br>
+            波士頓是美國最古老的城市之一，這裡有豐富的美國革命歷史，包括自由之路和<br>
+            波士頓茶葉事件。紐奧良則是一個充滿音樂、美食和文化傳統的城市，特別以<br>
+            其獨特的爵士樂和香料豐富的美食聞名。
+            </p>
+            <p>
+            無論你是追求大自然的奇觀還是對城市文化感興趣，美國都有著豐富多樣的<br>
+            景點等待你的探索。這個國家的美景和獨特體驗將給你留下難忘的回憶，並<br>
+            讓你更加了解美國的多元和魅力。
+            </p>
+            </div>
+        </article>
+        
+        <div class="button-container">
+                <button class="icon-button" onclick="changeImage()">
+                    <img id= "myImage"src = "button.png">
+                </button>
+       </div>
+    </div>
+    </body>
+</html>
