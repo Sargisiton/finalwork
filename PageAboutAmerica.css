@@ -1,0 +1,44 @@
+article{
+    color:rgb(67, 25, 146);
+    font-size: 35px;
+    line-height : 100px;
+    text-align: center;
+}
+.bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -999;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; /* 设置容器的高度为视口的高度 */
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.icon-button {
+    
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* 设置按钮图案的样式 */
+    /*background-image: url("去背logo.png");*/
+    /* ... */
+}
+.bg img{
+    min-height: 100%;
+    width: 100%;
+    opacity: 0.4;
+}
+.scroll-container{
+  height: 300px; /* 设置滚动容器的高度 */
+  overflow: scroll; /* 启用滚动 */
+  scroll-behavior: smooth; /* 平滑滚动效果 */
+}
+
